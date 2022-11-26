@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { ITheme } from '../interfaces/theme';
+import { ThemeService } from '../../core/services/theme.service';
+import { ITheme } from '../../interfaces/theme';
 
 @Component({
   selector: 'app-theme-list',
@@ -12,10 +12,10 @@ export class ThemeListComponent implements OnInit {
   themeList: ITheme[] | null = null;
   errorFetchingData = false;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
-    this.apiService.loadThemes().subscribe({
+    this.themeService.loadThemes().subscribe({
       next: (value) => {
         this.themeList = value;
       },

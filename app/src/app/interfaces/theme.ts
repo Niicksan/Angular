@@ -1,6 +1,6 @@
 import { IUser } from "./user";
 
-export interface ITheme {
+export interface ITheme<T = string> {
     themeName: string;
     subscribers: string[];
     userId: IUser;
