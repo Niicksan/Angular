@@ -1,4 +1,6 @@
-<div *ngIf="!!theme; else loadingIndicator" class="theme-content">
+<app-loader *ngIf="!theme"></app-loader>
+<div *ngIf="errorFetchingData">Error loading themes</div>
+<div *ngIf="!!theme" class="theme-content">
     <!-- theme-title  -->
     <div class="theme-title">
         <div class="theme-name-wrapper">
@@ -46,9 +48,3 @@
     </div>
 
 </div>
-
-<!-- <a routerLink="/themes/5fa64a9f2183ce1728ff371a">Angular 10</a> -->
-
-<ng-template #loadingIndicator>
-    Loading...
-</ng-template>
