@@ -14,7 +14,9 @@ export class ThemesDetailPageComponent implements OnInit {
   theme: ITheme<IPost> | null = null;
 
   canSubscribe: boolean = true;
-  isLoggedIn: boolean = this.userService.isLogged;
+  //isLoggedIn: boolean = this.userService.isLogged;
+  isLoggedIn: boolean = true;
+
   errorFetchingData = false;
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -24,8 +26,6 @@ export class ThemesDetailPageComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       const themeId = params['id'];
-      console.log(params)
-      console.log(themeId, typeof (themeId));
       this.themeService.loadTheme(themeId).subscribe({
         next: (theme) => {
           this.theme = theme;

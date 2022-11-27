@@ -1,13 +1,26 @@
-:host {
-    width: 100%;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 4.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.detail-message {
+    margin: 0 auto;
+    width: 80%;
 }
 
 /* theme content  */
-
 .theme-content {
+    margin: 0 auto;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    justify-content: center;
+    justify-items: center;
 }
 
 /* theme title  */
