@@ -8,18 +8,19 @@ export class UserService {
 
   isLogged = false;
 
-  constructor(private storage: StorageService) {
-    this.isLogged = this.storage.getItem('isLogged');
-    console.log('UserService#constructor');
-  }
+  // constructor(private storage: StorageService) {
+  //   this.isLogged = this.storage.getItem('isLogged');
+  //   console.log('UserService#constructor');
+  // }
+  constructor() { }
 
-  login(): void {
-    this.isLogged = true;
-    this.storage.setItem('isLogged', true);
-  }
+  // login(): void {
+  //   this.isLogged = true;
+  //   this.storage.setItem('isLogged', true);
+  // }
 
-  logout(): void {
-    this.isLogged = false;
-    this.storage.setItem('isLogged', false);
-  }
+  // logout(): void {
+  //   this.isLogged = false;
+  //   this.storage.setItem('isLogged', false);
+  // }
 }

@@ -9,7 +9,9 @@ import { ITheme } from '../../interfaces/theme';
 })
 export class ThemeListComponent implements OnInit {
 
+  isLoggedIn: boolean = true;
   themeList: ITheme[] | null = null;
+  canSubscribe: boolean = true;
   errorFetchingData = false;
 
   constructor(private themeService: ThemeService) { }
