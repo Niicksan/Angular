@@ -7,6 +7,7 @@ import { ThemesRoutingModule } from './themes-routing.module';
 import { ThemesNewPageComponent } from './themes-new-page/themes-new-page.component';
 import { ThemesDetailPageComponent } from './themes-detail-page/themes-detail-page.component';
 import { MainComponent } from './main/main.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MainComponent } from './main/main.component';
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
     ThemesRoutingModule,
   ],
   exports: [
